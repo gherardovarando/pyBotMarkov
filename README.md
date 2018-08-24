@@ -20,6 +20,10 @@ generator implemented in python.
 
 6. type `!QUIT!` to exit 
 
+##### training text file
+
+the training text file is a copy of David Copperfield downloaded from [http://www.gutenberg.org/ebooks/766](http://www.gutenberg.org/ebooks/766)
+
 ##### license 
 
 
