@@ -16,7 +16,7 @@ if (learnINP==""):
 testo=open(learnINP,'r')
 testo_r=lower(testo.read())
 testo_r=replace(testo_r,'...',' . ')
-testo_r=replace(testo_r,'\n','_LINE_')
+testo_r=replace(testo_r,'\n','')
 testo_r=replace(testo_r,'.',' . ')
 testo_r=replace(testo_r,'','')
 testo_r=replace(testo_r,';',' , ')
@@ -50,37 +50,20 @@ while True:
  inp=raw_input('? (use !QUIT! to exit)')
  if (inp=="!QUIT!"):
   break
+ else:
+     inp=lower(inp) 
  if dictionary.has_key(inp):
   now=universe[dictionary[inp]]
  else:
-  spie=raw_input('???')
-  testo_r=lower(spie)
-  s=split(testo_r)
-  s=['START']+[inp]+s+['END']
+  inp = 'START'
  
- 
-  for k in range(len(s)-1):
-   if (s[k+1] in dictionary):
-    print k
-   else:
-    dictionary[s[k+1]]=len(dictionary) 
-    universe=universe+[nodo(s[k+1])] 
-
-  for k in range(len(s)-1):
-    if s[k]=='.' :
-     universe[dictionary[s[k]]].addLink(universe[2])
-     universe[1].addLink(universe[dictionary[s[k+1]]])
-    else:
-     universe[dictionary[s[k]]].addLink(universe[dictionary[s[k+1]]])
-  
-  print('....')
- now=universe[dictionary[inp]]
- speech=""
+ now = universe[dictionary[inp]]
+ speech = ""
  for j in range(100):
-  speech=speech +" "+ now.par
+  speech = speech + " " + now.par
   
-  now=universe[dictionary[now.par]].link[randint(0,len(universe[dictionary[now.par]].link)-1)]
-  if now==END:
+  now=universe[dictionary[now.par]].link[randint( 0, len( universe[dictionary[now.par]].link) - 1)]
+  if now == END:
    break
- speech=replace(speech,'_LINE_','\n')
+ speech = replace(speech, 'START', '')
  print(speech)
