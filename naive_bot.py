@@ -32,14 +32,14 @@ universe=[START,END]
 
 print("learning ")
 for k in range(len(s)-1):
- print(" " + str(100*k/len(s))+"%")
+ print("learning " + str(100*k/len(s))+"%")
  if (s[k+1] not in dictionary): 
   dictionary[s[k+1]]=len(dictionary) 
   universe=universe+[nodo(s[k+1])]
 
 print "memorizing"
 for k in range(len(s)-1): 
-  print(" " + str(100*k/len(s))+"%")
+  print("memorizing " + str(100*k/len(s))+"%")
   if s[k]=='.' :
    universe[dictionary[s[k]]].addLink(universe[2])
    universe[1].addLink(universe[dictionary[s[k+1]]])
