@@ -16,7 +16,7 @@ if (learnINP==""):
 testo=open(learnINP,'r')
 testo_r=lower(testo.read())
 testo_r=replace(testo_r,'...',' . ')
-testo_r=replace(testo_r,'\n','')
+testo_r=replace(testo_r,'\n',' ')
 testo_r=replace(testo_r,'.',' . ')
 testo_r=replace(testo_r,'','')
 testo_r=replace(testo_r,';',' , ')
