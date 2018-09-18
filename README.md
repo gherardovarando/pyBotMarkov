@@ -29,6 +29,7 @@ the spanish training file is `donquijote.txt` obtained from
 
 For both text the Project Gutenberg License apply (see
 [www.gutenberg.net](www.gutenberg.net)) 
-##### license 
 
+##### license 
+MIT, Gherardo varando 2018
 
