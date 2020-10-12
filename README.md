@@ -9,7 +9,7 @@ generator implemented in python.
 
 1. clone the repository 
 
-2. enter the directory and execute `python naive_bot.py` 
+2. enter the directory and execute `python2 naive_bot.py` 
 
 3. provide the name of the training text (with extension .txt) if leave blank
    the learningtex.txt file in the same directory will be used
